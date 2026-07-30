@@ -14,7 +14,7 @@ def test_register_button_visible(page):
         page.goto("http://127.0.0.1:8000")
         expect(page.locator(".register-btn")).to_be_visible()
 
-def test_register_button_visible(page):
+def test_login_button_visible(page):
         page.goto("http://127.0.0.1:8000")
         expect(page.locator(".login-btn")).to_be_visible()
 
@@ -27,9 +27,6 @@ def test_login_button_enabled(page):
         page.goto("http://127.0.0.1:8000")
         expect(page.locator(".login-btn")).to_be_enabled()
 
-def test_home_button_enabled(page):
-        page.goto("http://127.0.0.1:8000")
-        expect(page.locator(".register-btn")).to_be_enabled()
 
 def test_register_navigation(page):
          page.goto("http://127.0.0.1:8000")
@@ -39,7 +36,7 @@ def test_register_navigation(page):
 
          expect(page).to_have_url("http://127.0.0.1:8000/register")
 
-def test_register_navigation(page):
+def test_login_navigation(page):
          
          page.goto("http://127.0.0.1:8000")
          login_btn=page.locator(".login-btn")
